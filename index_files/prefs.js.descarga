@@ -1,0 +1,41 @@
+var timePrefs = {
+    "times": [
+        {
+            "hour": [0, 5],
+            "background": "./index_files/img-03.jpg", /* media noche */
+            "clock": true,
+            "clock_position": ["128px", "", "", "24px"] /* TRBL */
+        },
+        {
+            "hour": [6, 11],
+            "background": "./index_files/img-02.jpg", /* mañana */
+            "clock": true,
+            "clock_position": ["128px", "", "", "24px"] /* TRBL */
+        },
+        {
+            "hour": [12, 15],
+            "background": "./index_files/img-04.jpg", /* dia */
+            "clock": true,
+            "clock_position": ["128px", "", "", "24px"] /* TRBL */
+        },
+        {
+            "hour": [16, 19],
+            "background": "./index_files/img-01.jpg", /* tarde */
+            "clock": true,
+            "clock_position": ["128px", "", "", "24px"] /* TRBL */
+        },
+        {
+            "hour": [20, 23],
+            "background": "./index_files/img-05.jpg", /* noche */
+            "clock": true,
+            "clock_position": ["128px", "", "", "24px"] /* TRBL */
+
+        }
+    ]
+};
+
+function doPrefs(){
+    currentTimeInt = getLocalTimeInt(); // Get current time 24 hour / int check
+    currentTime = getLocalTime(); // Get current time normally.
+    updateLoop = setInterval(updateIntv, 500); // 500ms cycles to update time and background updates.
+}
